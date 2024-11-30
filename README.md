@@ -1,3 +1,3 @@
 # LazAmazon
 
-![image](https://github.com/user-attachments/assets/7dcfd21a-2716-4567-bcad-4bd0a7139f14)
+![image](https://github.com/user-attachments/assets/ea082133-1d79-445a-8d32-8a7ebf44d94c)
