@@ -1,4 +1,7 @@
-# React + TypeScript + Vite
+# Real-Time Amazon Data
+https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-amazon-data
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
