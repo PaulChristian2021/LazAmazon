@@ -17,7 +17,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
           style={{ width: "40px", height: "37.6px" }}
           className="d-flex align-items-center border-0 border-top border-bottom bg-white"
           type="button"
-          id="button-addon1"
+          id="button-picture-search"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
         <button
           className="btn btn-outline-secondary bg-danger bg-gradient text-white"
           type="button"
-          id="button-addon2"
+          id="button-search"
         >
           Search
         </button>
