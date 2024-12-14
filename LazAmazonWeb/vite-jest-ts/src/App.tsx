@@ -35,14 +35,15 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route index path="" element={<LandingPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/account" element={<AccountPage />} />
+            <Route path="/cart" element={<CartPage />} />
+
             <Route path="/search" element={<SearchPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/orders" element={<OrdersPage />} />
-            <Route path="/messages" element={<MessagesPage />} />
-            <Route path="/cart" element={<CartPage />} />
             <Route path="/product" element={<ProductDetailPage />} />
             <Route path="/store" element={<StorePage />} />
-            <Route path="/account" element={<AccountPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>

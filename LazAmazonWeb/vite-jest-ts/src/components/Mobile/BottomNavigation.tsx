@@ -1,5 +1,5 @@
-import { FunctionComponent, useState } from "react";
-import { useNavigate } from "react-router";
+import { FunctionComponent, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 interface BottomNavigationProps {}
 
@@ -13,6 +13,7 @@ type Buttons = Button[];
 
 const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const buttons: Buttons = [
     {
       text: "Home",
@@ -87,9 +88,16 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
   const [activeBtn, setactiveBtn] = useState("");
 
   const handleButtonClick = (btn: Button) => {
-    setactiveBtn(btn.text);
+    setactiveBtn(btn.path);
     navigate(btn.path);
   };
+
+  useEffect(() => {
+    if (location.pathname) {
+      setactiveBtn(location.pathname.split("/")[1]);
+      console.log("location.pathname:", location.pathname.split("/")[1]);
+    }
+  }, []);
 
   return (
     <>
@@ -97,7 +105,7 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
         {buttons.map((btn) => (
           <button
             key={btn.text}
-            className={`btn d-block w-100 py-3 d-flex align-items-center flex-column ${activeBtn === btn.text ? "text-danger" : ""}`}
+            className={`btn d-block w-100 py-3 d-flex align-items-center flex-column ${activeBtn === btn.path ? "text-danger" : ""}`}
             type="button"
             id={btn.text}
             onClick={() => handleButtonClick(btn)}
