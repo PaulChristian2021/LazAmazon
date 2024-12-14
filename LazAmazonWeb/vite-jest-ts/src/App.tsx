@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import BottomNavigation from "./components/Mobile/BottomNavigation";
 import Header from "./components/Header";
+import MessagesPage from "./pages/MessagesPage";
 
 // import LandingPage from "./pages/LandingPage";
 // import CheckoutPage from "./pages/CheckoutPage";
@@ -37,6 +38,7 @@ function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/orders" element={<OrdersPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/product" element={<ProductDetailPage />} />
             <Route path="/store" element={<StorePage />} />

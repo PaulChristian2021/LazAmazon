@@ -93,7 +93,7 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
 
   return (
     <>
-      <div className="container fixed-bottom p-1 vw-100 bg-light d-flex justify-content-around">
+      <div className="container fixed-bottom p-1 vw-100 bg-light d-flex justify-content-around btn-group">
         {buttons.map((btn) => (
           <button
             key={btn.text}
