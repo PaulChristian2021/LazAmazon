@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import BottomNavigation from "./components/Mobile/BottomNavigation";
 import Header from "./components/Header";
+import MessagesPage from "./pages/MessagesPage";
 
 // import LandingPage from "./pages/LandingPage";
 // import CheckoutPage from "./pages/CheckoutPage";
@@ -28,24 +29,26 @@ const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         {/* TODO Add a proper loading spinner for Suspense */}
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route index path="" element={<LandingPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/account" element={<AccountPage />} />
+            <Route path="/cart" element={<CartPage />} />
+
             <Route path="/search" element={<SearchPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/orders" element={<OrdersPage />} />
-            <Route path="/cart" element={<CartPage />} />
             <Route path="/product" element={<ProductDetailPage />} />
             <Route path="/store" element={<StorePage />} />
-            <Route path="/account" element={<AccountPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </Suspense>
+        <BottomNavigation />
       </BrowserRouter>
-      <BottomNavigation />
     </>
   );
 }

@@ -1,11 +1,43 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 interface HeaderProps {}
 
 const Header: FunctionComponent<HeaderProps> = () => {
+  const location = useLocation();
+  const baseUrl = "/";
+  const [isLandingPage, setisLandingPage] = useState<boolean>(false);
+  useEffect(() => {
+    if (location.pathname === baseUrl) {
+      setisLandingPage(true);
+    } else {
+      setisLandingPage(false);
+    }
+  }, [document.URL]);
+
   return (
     <div className="container sticky-top p-2 vw-100 bg-light">
       <div className="input-group justify-between align-items-center">
+        {!isLandingPage && (
+          <button
+            style={{ width: "40px", height: "37.6px" }}
+            className="d-flex justify-center align-items-center border-0 bg-white"
+            type="button"
+            id="back-button"
+            onClick={() => {}}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="20"
+              fill="currentColor"
+              className="bi bi-caret-left-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+            </svg>
+          </button>
+        )}
         <input
           type="text"
           className="form-control border-end-0"
@@ -17,7 +49,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
           style={{ width: "40px", height: "37.6px" }}
           className="d-flex align-items-center border-0 border-top border-bottom bg-white"
           type="button"
-          id="button-addon1"
+          id="button-picture-search"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +66,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
         <button
           className="btn btn-outline-secondary bg-danger bg-gradient text-white"
           type="button"
-          id="button-addon2"
+          id="button-search"
         >
           Search
         </button>
