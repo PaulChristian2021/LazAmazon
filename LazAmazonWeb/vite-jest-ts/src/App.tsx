@@ -29,8 +29,8 @@ const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         {/* TODO Add a proper loading spinner for Suspense */}
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
