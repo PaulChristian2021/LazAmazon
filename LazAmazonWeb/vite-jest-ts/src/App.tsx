@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import React, { Suspense } from "react";
 import "./App.css";
 import BottomNavigation from "./components/Mobile/BottomNavigation";
-import Header from "./components/Header";
 import MessagesPage from "./pages/MessagesPage";
 
 // import LandingPage from "./pages/LandingPage";
@@ -30,7 +29,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
         {/* TODO Add a proper loading spinner for Suspense */}
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>

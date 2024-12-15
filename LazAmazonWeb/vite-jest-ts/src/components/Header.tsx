@@ -18,6 +18,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
   return (
     <div className="container sticky-top p-2 vw-100 bg-light">
       <div className="input-group justify-between align-items-center">
+        {/* todo: make this button appear only on paths inside landing page ie product & shop page, etc */}
         {!isLandingPage && (
           <button
             style={{ width: "40px", height: "37.6px" }}
