@@ -83,10 +83,53 @@ const AccountPage: FunctionComponent<AccountPageProps> = () => {
     },
   ];
 
+  const recentlyViewed = [
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/6623445/pexels-photo-6623445.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/7115332/pexels-photo-7115332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/459830/pexels-photo-459830.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/2745833/pexels-photo-2745833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/3731266/pexels-photo-3731266.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/163185/pexels-photo-163185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/1598503/pexels-photo-1598503.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/3751222/pexels-photo-3751222.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/4065808/pexels-photo-4065808.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+    {
+      price: 174.97,
+      img: "https://images.pexels.com/photos/5953769/pexels-photo-5953769.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+    },
+  ];
+
   return (
     <div className="container my-2">
-      <div className="container d-flex ">
-        <img
+      <div className="container d-flex px-0 justify-content-between align-items-center">
+        {/* <img
           src="../../../public/store.png"
           // src={msg.image}
           onError={(e) => {
@@ -96,17 +139,47 @@ const AccountPage: FunctionComponent<AccountPageProps> = () => {
           className="rounded-circle d-inline-block border"
           style={{ height: "60px", width: "60px" }}
           alt="..."
-        />
-        <h1 className="fs-3">Paul Christian ...</h1>
+        /> */}
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          fill="currentColor"
+          className="bi bi-person-fill border border-dark rounded-circle"
+          viewBox="0 0 16 16"
+        >
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+        </svg>
+        <div>
+          <h1 className="fs-3">Paul Christian Masayon </h1>
+        </div>
+        <button
+          style={{ fontSize: "11px" }}
+          className="btn d-flex flex-column justify-content-center align-items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            className="bi bi-gear"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+          </svg>
+          <span>Setting</span>
+        </button>
       </div>
-      <div className="container ">
+      <div className="container px-0 my-2 ">
         <div className="container d-flex justify-content-between align-items-center px-0">
           <h2 className="fs-5">My Orders</h2>
           <button type="button" className="btn " style={{ fontSize: "12px" }}>
-            View All Orders
+            View All Orders &gt;
           </button>
         </div>
-        <div className="row d-flex flex-row ">
+        <div className="row my-1 d-flex flex-row ">
           {ordersTypesButtons.map((otb) => (
             <button
               className="btn w-100 col d-flex flex-column align-items-center justify-content-center"
@@ -116,54 +189,107 @@ const AccountPage: FunctionComponent<AccountPageProps> = () => {
               <span className="fs-7">{otb.text}</span>
             </button>
           ))}
-          {/* <button
-            className="btn w-100 col d-flex flex-column align-items-center justify-content-center"
-            style={{ fontSize: "11px" }}
-          >
-            <span className="fs-7"></span>
-          </button>
-          <button
-            className="btn w-100 col d-flex flex-column align-items-center justify-content-center"
-            style={{ fontSize: "11px" }}
-          >
-            <span className="">To Receive</span>
-          </button>
-          <button
-            className="btn w-100 col d-flex flex-column align-items-center justify-content-center"
-            style={{ fontSize: "11px", width: "20%" }}
-          >
-            <span className="fs-8">To Review</span>
-          </button>
-          <button
-            className="btn w-100 col d-flex flex-column align-items-center justify-content-center"
-            style={{ fontSize: "10px", width: "20%" }}
-          >
-            <span className="fs-7">Returns & Cancellations</span>
-          </button> */}
-          {/* <button
-            key={btn.text}
-            className={`btn d-block w-100 py-3 d-flex align-items-center flex-column ${activeBtn === btn.path ? "text-danger" : ""}`}
-            type="button"
-            id={btn.text}
-            onClick={() => handleButtonClick(btn)}
-          >
-            {btn.icon}
-            <span style={{ fontSize: "0.75rem" }}>{btn.text}</span> */}
         </div>
         <div
           id="random-orders-status-carousel"
-          className="row p-2 border border-1"
+          className="row m-2 p-2 border border-1"
         >
           random-orders-status-carousel <br />
           random-orders-status-carousel
         </div>
       </div>
 
-      <div className="container">
-        <h2 className="fs-5">My Channels</h2>
-        <div className="row"></div>
-        <div className="row"></div>
-        <div className="row"></div>
+      <div className="container px-0 my-2">
+        <div className="container d-flex justify-content-between align-items-center px-0">
+          <h2 className="fs-5">My Wallet</h2>
+          <button type="button" className="btn " style={{ fontSize: "12px" }}>
+            View &gt;
+          </button>
+        </div>
+        <div className="row px-2 d-flex">
+          <button
+            style={{ fontSize: "11px" }}
+            className="w-50 col d-flex align-items-center justify-content-between m-1 btn bg-dark-subtle"
+          >
+            <span>
+              LazAmazon <br />
+              Wallet
+            </span>
+            <div className=" d-flex flex-column align-items-center justify-content-center">
+              <data value="100.00" aria-label="Price in PHP">
+                ₱13,000
+              </data>
+              <span className="badge text-bg-info">View</span>
+            </div>
+          </button>
+          <button
+            style={{ fontSize: "11px" }}
+            className="w-50 col d-flex align-items-center justify-content-between m-1 btn bg-dark-subtle"
+          >
+            <span>
+              LazAmazon <br />
+              Credit
+            </span>
+            <div className=" d-flex flex-column align-items-center justify-content-center">
+              <data value="10000.00" aria-label="Price in PHP">
+                ₱10,000.00
+              </data>
+              <span className="badge text-bg-info">Withdraw</span>
+            </div>
+          </button>
+        </div>
+
+        <div className="row px-2">
+          <button
+            style={{ fontSize: "11px" }}
+            className="w-50 col d-flex align-items-center justify-content-between m-1 btn bg-dark-subtle"
+          >
+            <span>Php</span>
+            <div className=" d-flex flex-column align-items-center justify-content-center">
+              <data value="100.00" aria-label="Price in PHP">
+                ₱100.00
+              </data>
+              <span className="badge text-bg-info">Cash In</span>
+            </div>
+          </button>
+          <button
+            style={{ fontSize: "11px" }}
+            className="w-50 col d-flex align-items-center justify-content-between m-1 btn bg-dark-subtle"
+          >
+            <span>Payment Options</span>
+            <div className=" d-flex flex-column align-items-center justify-content-center">
+              <span>6</span>
+              <span className="badge text-bg-info">View</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div className="container px-0 my-2">
+        <div className="container d-flex justify-content-between align-items-center px-0">
+          <h2 className="fs-5">Recently Viewed</h2>
+          <button type="button" className="btn " style={{ fontSize: "12px" }}>
+            View more &gt;
+          </button>
+        </div>
+        <div className="container d-flex overflow-auto">
+          {recentlyViewed.map((rv) => (
+            <button className="btn p-0 me-2 d-flex flex-column">
+              <img
+                src={rv.img}
+                onError={(e) => {
+                  // @ts-ignore
+                  e.target.src = "../../../public/store.png";
+                }}
+                alt=""
+                srcSet=""
+                className="rounded"
+                style={{ height: "80px", width: "80px" }}
+              />
+              <span className="fs-6">P174.97</span>
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
