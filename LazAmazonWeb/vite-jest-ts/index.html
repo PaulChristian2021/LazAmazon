@@ -8,7 +8,18 @@
   </head>
   <body>
     <div id="root"></div>
-<!--    <a href="https://www.flaticon.com/free-icons/shop" title="shop icons">Shop icons created by Freepik - Flaticon</a>-->
+    <!--    <a href="https://www.flaticon.com/free-icons/shop" title="shop icons">Shop icons created by Freepik - Flaticon</a>-->
     <script type="module" src="/src/main.tsx"></script>
   </body>
+  <script>
+    //
+    // TODO: Remove these style to stop forcing it to be mobile-like
+    const root = document.getElementById("root"); // @ts-ignore
+    root.style.maxWidth = "420px"; // @ts-ignore
+    root.style.margin = "auto"; // @ts-ignore
+    root.style.border = "2px solid gray";
+    // @ts-ignore
+    document.getElementById("searchHeader").style.maxWidth = "420px";
+    //
+  </script>
 </html>

@@ -93,15 +93,28 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
   };
 
   useEffect(() => {
+    // @ts-ignore
+    document.getElementById("bottomNavigation").style.maxWidth = "420px";
+
     if (location.pathname) {
       setactiveBtn(location.pathname.split("/")[1]);
       console.log("location.pathname:", location.pathname.split("/")[1]);
     }
   }, []);
 
+  useEffect(() => {
+    if (location.pathname) {
+      setactiveBtn(location.pathname.split("/")[1]);
+      console.log("location.pathname:", location.pathname.split("/")[1]);
+    }
+  }, [location]);
+
   return (
     <>
-      <div className="container fixed-bottom p-1 vw-100 bg-light d-flex justify-content-around btn-group">
+      <div
+        id="bottomNavigation"
+        className="container fixed-bottom p-1 bg-light d-flex justify-content-around btn-group"
+      >
         {buttons.map((btn) => (
           <button
             key={btn.text}
