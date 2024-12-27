@@ -102,6 +102,13 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (location.pathname) {
+      setactiveBtn(location.pathname.split("/")[1]);
+      console.log("location.pathname:", location.pathname.split("/")[1]);
+    }
+  }, [location]);
+
   return (
     <>
       <div
