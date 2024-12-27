@@ -16,7 +16,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
   }, [document.URL]);
 
   return (
-    <div className="container sticky-top p-2 vw-100 bg-light">
+    <div id="searchHeader" className="container sticky-top p-2  bg-light">
       <div className="input-group justify-between align-items-center">
         {/* todo: make this button appear only on paths inside landing page ie product & shop page, etc */}
         {!isLandingPage && (
