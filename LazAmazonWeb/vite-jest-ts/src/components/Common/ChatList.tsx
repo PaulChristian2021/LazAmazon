@@ -96,11 +96,11 @@ const ChatList: FunctionComponent<ChatListProps> = () => {
             key={msg.id}
           >
             <img
-              // src="../../../public/store.png"
+              // src="../../../store.png"
               src={msg.image}
               onError={(e) => {
                 // @ts-ignore
-                e.target.src = "../../../public/store.png";
+                e.target.src = "/store.png";
               }}
               className="rounded-circle d-inline-block border"
               style={{ height: "60px", width: "60px" }}

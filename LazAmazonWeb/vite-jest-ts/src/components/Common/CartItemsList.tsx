@@ -185,11 +185,11 @@ const CartItemsList: FunctionComponent<CartItemsListProps> = () => {
               <span>{item.description}</span>
             </div>
             <img
-              //   src="../../../public/store.png"
+              //   src="../../../store.png"
               src={item.image}
               onError={(e) => {
                 // @ts-ignore
-                e.target.src = "../../../public/store.png";
+                e.target.src = "/store.png";
               }}
               className="d-inline-block border"
               style={{ height: "60px", width: "60px" }}

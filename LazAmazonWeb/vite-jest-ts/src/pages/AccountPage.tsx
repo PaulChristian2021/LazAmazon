@@ -272,11 +272,11 @@ const AccountPage: FunctionComponent<AccountPageProps> = () => {
     <div className="container my-2">
       <div className="container d-flex px-0 justify-content-between align-items-center">
         {/* <img
-          src="../../../public/store.png"
+          src="../../../store.png"
           // src={msg.image}
           onError={(e) => {
             // @ts-ignore
-            e.target.src = "../../../public/store.png";
+            e.target.src = "../../../store.png";
           }}
           className="rounded-circle d-inline-block border"
           style={{ height: "60px", width: "60px" }}
@@ -421,7 +421,7 @@ const AccountPage: FunctionComponent<AccountPageProps> = () => {
                 src={rv.img}
                 onError={(e) => {
                   // @ts-ignore
-                  e.target.src = "../../../public/store.png";
+                  e.target.src = "/store.png";
                 }}
                 alt=""
                 srcSet=""

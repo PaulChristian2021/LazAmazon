@@ -33,46 +33,65 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/6623445/pexels-photo-6623445.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 1,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/7115332/pexels-photo-7115332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 2,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/459830/pexels-photo-459830.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 3,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/2745833/pexels-photo-2745833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 4,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/3731266/pexels-photo-3731266.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 5,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/163185/pexels-photo-163185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 6,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/1598503/pexels-photo-1598503.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 7,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/3751222/pexels-photo-3751222.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 8,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/4065808/pexels-photo-4065808.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 9,
     },
     {
       price: 174.97,
       img: "https://images.pexels.com/photos/5953769/pexels-photo-5953769.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
+      key: 10,
     },
   ];
 
   //
+
+  useEffect(() => {
+    console.log("%c 2024.29.1", "color: blue; font-size: 20px;");
+    // console.log(
+    //   "%cHello %cWorld!",
+    //   "color: red; font-size: 20px;",
+    //   "color: blue; font-size: 20px;"
+    // );
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -113,7 +132,7 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
               <img
                 style={{ height: "200px" }}
                 className="d-block w-100"
-                src="../../../public/gifts.jpg"
+                src="/gifts.jpg"
                 alt="First slide"
               />
             </div>
@@ -123,7 +142,7 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
               <img
                 style={{ height: "200px" }}
                 className="d-block w-100"
-                src="../../../public/horizon.png"
+                src="/horizon.png"
                 alt="Second slide"
               />
             </div>
@@ -133,7 +152,7 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
               <img
                 style={{ height: "200px" }}
                 className="d-block w-100"
-                src="../../../public/chairs.jpg"
+                src="/chairs.jpg"
                 alt="Third slide"
               />
             </div>
@@ -177,12 +196,13 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
           </div>
           <div className="container d-flex overflow-auto">
             {recentlyViewed.map((rv) => (
-              <button className="btn p-0 me-2 d-flex flex-column">
+              <button key={rv.key} className="btn p-0 me-2 d-flex flex-column">
                 <img
                   src={rv.img}
+                  // src="/store.png"
                   onError={(e) => {
                     // @ts-ignore
-                    e.target.src = "../../../public/store.png";
+                    e.target.src = "/store.png";
                   }}
                   alt=""
                   srcSet=""
