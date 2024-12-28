@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import "./App.css";
 import BottomNavigation from "./components/Mobile/BottomNavigation";
 import MessagesPage from "./pages/MessagesPage";
@@ -26,6 +26,15 @@ const CartPage = React.lazy(() => import("./pages/CartPage"));
 const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
+  useEffect(() => {
+    console.log("%c 2024.29.2", "color: blue; font-size: 20px;");
+    // console.log(
+    //   "%cHello %cWorld!",
+    //   "color: red; font-size: 20px;",
+    //   "color: blue; font-size: 20px;"
+    // );
+  }, []);
+
   return (
     <>
       <BrowserRouter>
@@ -47,6 +56,11 @@ function App() {
         </Suspense>
         <BottomNavigation />
       </BrowserRouter>
+      <>
+        {/* Just spacing */}
+        <div className="py-5" />
+        <div className="py-5" />
+      </>
     </>
   );
 }

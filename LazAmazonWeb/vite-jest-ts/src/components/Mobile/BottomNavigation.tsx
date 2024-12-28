@@ -93,8 +93,9 @@ const BottomNavigation: FunctionComponent<BottomNavigationProps> = () => {
   };
 
   useEffect(() => {
-    // @ts-ignore
-    document.getElementById("bottomNavigation").style.maxWidth = "420px";
+    // TODO: Remove these style to stop forcing it to be mobile-like
+    // @ts-ignore   T
+    document.getElementById("bottomNavigation").style.maxWidth = "418px";
 
     if (location.pathname) {
       setactiveBtn(location.pathname.split("/")[1]);

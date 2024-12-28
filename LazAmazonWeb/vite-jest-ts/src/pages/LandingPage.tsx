@@ -31,67 +31,58 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
 
   const recentlyViewed = [
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/6623445/pexels-photo-6623445.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 1,
+      price: 91.97,
+      img: "https://images.pexels.com/photos/6623445/pexels-photo-6623445.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/7115332/pexels-photo-7115332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 2,
+      price: 54.99,
+      img: "https://images.pexels.com/photos/7115332/pexels-photo-7115332.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/459830/pexels-photo-459830.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 3,
+      price: 149.5,
+      img: "https://images.pexels.com/photos/459830/pexels-photo-459830.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/2745833/pexels-photo-2745833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 4,
+      price: 21.97,
+      img: "https://images.pexels.com/photos/2745833/pexels-photo-2745833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/3731266/pexels-photo-3731266.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 5,
+      price: 61.97,
+      img: "https://images.pexels.com/photos/3731266/pexels-photo-3731266.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
+      key: 6,
       price: 174.97,
       img: "https://images.pexels.com/photos/163185/pexels-photo-163185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
-      key: 6,
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/1598503/pexels-photo-1598503.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 7,
+      price: 35.97,
+      img: "https://images.pexels.com/photos/1598503/pexels-photo-1598503.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/3751222/pexels-photo-3751222.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 8,
+      price: 120.75,
+      img: "https://images.pexels.com/photos/3751222/pexels-photo-3751222.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/4065808/pexels-photo-4065808.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 9,
+      price: 89.99,
+      img: "https://images.pexels.com/photos/4065808/pexels-photo-4065808.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
     {
-      price: 174.97,
-      img: "https://images.pexels.com/photos/5953769/pexels-photo-5953769.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
       key: 10,
+      price: 99.97,
+      img: "https://images.pexels.com/photos/5953769/pexels-photo-5953769.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150",
     },
   ];
 
   //
-
-  useEffect(() => {
-    console.log("%c 2024.29.1", "color: blue; font-size: 20px;");
-    // console.log(
-    //   "%cHello %cWorld!",
-    //   "color: red; font-size: 20px;",
-    //   "color: blue; font-size: 20px;"
-    // );
-  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -209,7 +200,7 @@ const LandingPage: FunctionComponent<LandingPageProps> = () => {
                   className="rounded"
                   style={{ height: "80px", width: "80px" }}
                 />
-                <span className="fs-6">P174.97</span>
+                <span className="fs-6">₱{rv.price}</span>
               </button>
             ))}
           </div>
