@@ -1,4 +1,4 @@
-import { FunctionComponent, SetStateAction } from "react";
+import { FunctionComponent } from "react";
 
 interface CartItemsListProps {
   cartItems: {

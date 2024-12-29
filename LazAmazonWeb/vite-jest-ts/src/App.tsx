@@ -27,7 +27,7 @@ const NotFoundPage = React.lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   useEffect(() => {
-    console.log("%c 2024.29.2", "color: blue; font-size: 20px;");
+    console.log("%c 2024.29.3", "color: blue; font-size: 20px;");
     // console.log(
     //   "%cHello %cWorld!",
     //   "color: red; font-size: 20px;",
