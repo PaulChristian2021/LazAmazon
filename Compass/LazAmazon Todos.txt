@@ -1,0 +1,4 @@
+
+-Netlify deployment doesnt find the pages when refreshed from other than the Landing page
+-Tablet > Desktop view after the mobile is done
+-UI/UX improvement 
